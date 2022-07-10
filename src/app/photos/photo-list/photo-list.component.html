@@ -1,0 +1,14 @@
+<div class="text-center mt-3 mb-3">
+  <form>
+    <input 
+      class="rounded"
+      type="search"
+      placeholder="search..."
+      autofocus
+      (keyup)="onKey($event)">
+  </form>
+</div>
+
+{{ filter }}
+
+<photos [photos]="photos"></photos>
