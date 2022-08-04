@@ -1,14 +1,13 @@
 <div class="text-center mt-3 mb-3">
   <form>
     <input 
+      #txtSearch
       class="rounded"
       type="search"
       placeholder="search..."
       autofocus
-      (keyup)="onKey($event)">
+      (keyup)="debounce.next(txtSearch.value)">
   </form>
 </div>
 
-{{ filter }}
-
-<photos [photos]="photos"></photos>
+<photos [photos]="photos | filterByDescription: filter"></photos>
