@@ -1,5 +1,6 @@
 <div class="text-center mt-3 mb-3">
   <form>
+    <i aria-hidden="true" class="fa fa-search me-2"></i>
     <input 
       #txtSearch
       class="rounded"
@@ -11,3 +12,8 @@
 </div>
 
 <photos [photos]="photos | filterByDescription: filter"></photos>
+
+<app-load-button 
+    (click)="load()"    
+    [hasMore]="hasMore">
+</app-load-button>
