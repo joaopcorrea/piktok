@@ -4,7 +4,7 @@
 
 <ol class="list-unstyled">
   <li *ngFor="let cols of rows" class="row g-0">
-    <div *ngFor="let photo of cols" class="col-4">
+    <div *ngFor="let photo of cols" class="col-4" darkenOnHover>
       <card>
         <photo 
           [url]="photo.url" 
